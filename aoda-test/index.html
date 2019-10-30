@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<title>BMO - UI AODA Test</title>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/your-styles-here.css" />
+	<link rel="stylesheet" href="fonts/heebo.css" />
+</head>
+
+<body class="js">
+	<div class="test-container">
+		<h1 class="test-heading">BMO Accessiblity Test for UI Devs</h1>
+		<header>
+			<h1 class="test-heading">Create an accessible navigation</h1>
+
+			<button id="toggle" aria-expanded="false" aria-controls="menu">Show/Hide Nav</button>
+			<nav id="menu" aria-labelledby="main-menu">
+				<ul id="main-menu">
+					<li><a href="#" aria-current="page">Home</a></li>
+					<li><a href="#">about</a></li>
+					<li><a href="#">shop</a></li>
+					<li><a href="#">contact us</a></li>
+
+				</ul>
+			</nav>
+		</header>
+		<main class="main-content" id="main-content">
+			<h1 class="test-heading"> Enrollment form </h1>
+
+			<h2 class="test-heading2" id="personalinformation">Personal Information</h2>
+
+			<label id="firstname" for="firstname">First name:</label>
+			<span>
+				<input type="text" class="input-info" name="firstname" id="firstname" aria-labelledby="firstname"
+					aria-describedby="personalinformation" tabindex="0" required aria-required="true"><br>
+			</span>
+			<label id="age" for="age">Age:</label>
+			<span>
+				<input type="number" class="input-info" name="age" id="age" aria-labelledby="age"
+					aria-describedby="personalinformation" min="18" max="100"><br>
+			</span>
+
+			<label id="email" for="email">Email: </label>
+			<span>
+				<input type="email" class="input-info" name="email" id="email" aria-labelledby="email"
+					aria-describedby="personalinformation" placeholder="myname@example.com" required
+					aria-required="true"><br>
+			</span>
+
+			<h2 class="test-heading2">Family Information</h2>
+
+			<fieldset>
+				<legend>family size</legend>
+				<div id="single">
+					<input type="radio" name="family" id="single" value="single" checked aria-labelledby="single"
+						aria-checked="true">
+					<label for="single">Single</label>
+				</div>
+				<div id="married">
+					<input type="radio" name="family" id="married" value="Married" aria-labelledby="married"
+						aria-checked="false">
+					<label for="married">Married</label>
+				</div>
+				<div id="kids">
+					<input type="radio" name="family" id="kids" value="kids" aria-labelledby="kids"
+						aria-checked="false">
+					<label for="kids">Have Kids</label>
+				</div>
+			</fieldset>
+
+			<h2 class="test-heading2" id="yourself">describe yourself</h2>
+			<label for="describeyourself" id="describeyourself">please describe about yourself</label>
+			<textarea id="describeyourself" aria-describedby="yourself" aria-labelledby="describeyourself"
+				aria-multiline="true"></textarea>
+
+
+			<h1 class="test-heading">Bonus Marks: Create an accessible modal with Keyboard Trap.(only if everything else
+				is complete)</h1>
+			<button class="modal-trigger">Modal Trigger</button>
+			<div class="modal">
+				<button>Close Modal</button>
+				<div class="modal-header">
+					<div>
+						<h1>This is a modal title 1</h1>
+					</div>
+				</div>
+				<div class="modal-body">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+						labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+						laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+						voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+					</p>
+				</div>
+			</div>
+			<div class="overlay"></div>
+
+		</main>
+		<footer>
+			<h1 class="test-heading">footer</h1>
+		</footer>
+	</div>
+	<script src="assets/js/jquery-1.11.3.min.js"></script>
+	<script src="js/your-js-here.js"></script>
+</body>
+
+</html>

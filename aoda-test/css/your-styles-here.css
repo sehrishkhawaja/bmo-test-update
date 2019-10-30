@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+/* CSS Document */
+.input-info {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+nav {
+  border-top: 1px solid transparentize(#fff, 0.4);
+  padding: 1em 1em 0;
+}
+
+nav li {
+  margin-bottom: 1em;
+}
+
+nav a {
+  display: block;
+}
+
+.js ul {
+  display: none;
+}
+
+.js button {
+  display: block;
+}
+
+ul .is-active {
+  display: block;
+}
+
+@media (min-width: 700px) {
+  .js ul {
+    display: block;
+  }
+
+  .js button {
+    display: none;
+  }
+
+  button {
+    display: none;
+  }
+
+  nav {
+    padding-left: 0;
+  }
+
+  nav li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+}
